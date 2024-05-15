@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";  // Importación del Layout global.
+---
+
+<Layout title="Quizz Dev | Inicio">  <!--Title de la página -->
+
+  <section class="pt-32 text-center min-h-screen">  <!--Ajuste del contenedor -->
+  
+    <div class="text-center">
+      <img src="landing.png" alt="landing" class="mx-auto animate-bounce-fade-in h-[400px] w-auto">  <!--Estilos de la imagen inicial -->
+    </div>
+
+    <h1 class="text-neutral-200 text-2xl font-bold pt-4 text-pretty">  <!--Estilo para el titulo -->
+      ¡Aprende y explora de forma <br> divertida el mundo del software!
+    </h1>
+
+    <div class="grid w-80 pt-10 gap-4 mx-auto text-sm font-bold ">  <!--Estilos para los botones de registro y login -->
+      <a href="/registro" class="text-neutral-100 py-4 bg-sky-700 rounded-xl border-b-4 border-sky-900 hover:bg-sky-600 transition-colors">
+        EMPIEZA AHORA</a>
+      <a href="/login" class="text-neutral-800 py-4 bg-neutral-300 rounded-xl border-b-4 border-neutral-500 hover:bg-neutral-100 transition-colors">
+        YA TENGO UNA CUENTA</a>
+    </div>
+        
+  </section>
+
+</Layout>

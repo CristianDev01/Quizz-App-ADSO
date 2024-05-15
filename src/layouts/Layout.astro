@@ -1,0 +1,41 @@
+---
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";  // Importación de los componentes del Navbar y footer para utilizarlos de forma global en mi app.
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;  // Creación del prop title, para requerir de forma global en las pages que se utilice un titulo.
+---
+
+<!doctype html>  <!--Estructura del Html en astro de forma global -->
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Astro description" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	
+	<meta name="generator" content={Astro.generator} />
+	<title>{title}</title>
+</head>
+	
+<body>
+  <NavBar />  <!--Importación del componente Navbar en el body de forma global -->
+<slot />
+<Footer />  <!--Importación del componente Footer en el body de forma global -->
+</body>
+
+</html>
+
+<!--Estilos globales como la fuente, el color de la fuente en modo dark y el background para la app -->
+<style is:global>
+	
+html {
+	font-family: sans-serif;
+	color-scheme: dark light;
+	background: radial-gradient(farthest-corner at 50% 50%, rgb(65, 65, 97) 0%, #000005ff 100%);
+}
+
+</style>
