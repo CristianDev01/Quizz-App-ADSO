@@ -1,12 +1,13 @@
-# Astro Starter Kit: Basics
+# Guía y herramientas para abrir el proyecto!
+
+![Static Badge](https://img.shields.io/badge/Node.js-%20LTS%20v20.13.1---?style=for-the-badge&logo=nodedotjs&link=https%3A%2F%2Fnodejs.org%2Fen%2Fdownload)
+
 
 ```sh
 npm create astro@latest -- --template basics
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
