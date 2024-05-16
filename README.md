@@ -1,56 +1,75 @@
-# Guía y herramientas para abrir el proyecto!
+# 🚀 Herramientas y guía para abrir el proyecto en local
 
-![Static Badge](https://img.shields.io/badge/Node.js-%20LTS%20v20.13.1---?style=for-the-badge&logo=nodedotjs&link=https%3A%2F%2Fnodejs.org%2Fen%2Fdownload)
+<a href="https://nodejs.org/en/download" target="_blank">
+<img src="https://img.shields.io/badge/LTS%20v20.13.1-%235FA04E?style=flat-square&logo=nodedotjs&logoColor=%235FA04E&label=Node%20js&labelColor=white"></a>
 
+<a href="https://code.visualstudio.com/" target="_blank">
+<img src="https://img.shields.io/badge/Visual%20Studio%20Code-%23007ACC?style=flat-square&logo=visualstudiocode"></a>
+
+<a href="https://www.postman.com/downloads/" target="_blank">
+<img src="https://img.shields.io/badge/Postman-%23FF6C37?style=flat-square&logo=postman&logoColor=white"></a>
+
+## Node js en la terminal 📟
+
+> Ejecuta en la raiz el siguiente comando para instalar las dependencias (package json).
 
 ```sh
-npm create astro@latest -- --template basics
+npm install
 ```
 
+## Por último abre VS Code </>
 
+> En la raiz del proyecto ejecuta.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+```sh
+code .
+```
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Estructura del proyecto 🗂️
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+Dentro del proyecto Astro, verá las siguientes carpetas.
 
 ```text
 /
+├── API/
+│   ├── database
+│   │
+│   ├── routes
+│   │
+│   auth
+│   │
 ├── public/
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   
 │   └── pages/
-│       └── index.astro
+│       
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+En `API/`, está el modelo de database, el CRUD con los endpoints de login y registro.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se expone como una ruta según su nombre de archivo.
 
-Any static assets, like images, can be placed in the `public/` directory.
+En `src/components/`, coloco los componentes reutilizables de Astro o React.
 
-## 🧞 Commands
+Los archivos estáticos, como imágenes los coloco en el directorio `public/`.
 
-All commands are run from the root of the project, from a terminal:
+## Comandos de Astro 🧞
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-## 👀 Want to learn more?
+> Para iniciar el servidor del desarrollo local en `localhost:4321`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-# Quizz-App-ADSO
+```sh
+npm run dev
+```
+
+> Para iniciar el servidor de la APi
+
+```sh
+npm run start
+```
