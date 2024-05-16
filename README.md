@@ -37,7 +37,7 @@ Dentro del proyecto Astro, verá las siguientes carpetas.
 │   ├── routes
 │   │
 │   auth
-│   │
+│   
 ├── public/
 │   └── favicon.svg
 ├── src/
