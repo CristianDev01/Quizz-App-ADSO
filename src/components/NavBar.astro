@@ -1,44 +1,47 @@
 ---
 import AbrirMenu from "./icons/AbrirMenu.astro";   
 import CerrarMenu from "./icons/CerrarMenu.astro";
+import Logo from "./icons/Logo.astro";
 ---
 
 <nav class="bg-black fixed top-0 right-0 left-0 z-50">
-  <div class="flex justify-between px-4 h-[61px] items-center border-b border-neutral-400 ">
+  <div class="flex justify-around px-2 h-[61px] items-center border-b border-neutral-400 ">
     
-    <div class="mx-auto pt-1 lg:mx-0 lg:ml-20">
+    <div class="mx-auto pt-1 lg:mx-0 flex space-x-12">
+      
       <a href="/">
-        <img src="logo.svg" alt="QUIZZ DEV" />  
+        <Logo />
       </a>
+
+      <div class="text-neutral-400 font-semibold text-sm items-center space-x-12  hidden lg:flex">
+        <a href="https://github.com/CristianDev01/Quizz-App-ADSO" target="_blank" class="hover:text-white transition-colors"
+        >COMO FUNCIONA
+        </a>
+        <a href="https://github.com/CristianDev01" target="_blank" class="hover:text-white transition-colors"
+        >ACERCA DE
+        </a>
+        <a href="https://github.com/CristianDev01/Quizz-App-ADSO/blob/main/README.md" target="_blank" class="hover:text-white transition-colors"
+        >DOCUMENTACIÓN
+        </a>
+      </div>
+
     </div>
 
-    <div class="text-neutral-400 font-semibold text-sm items-center mx-auto space-x-12 ml-16 hidden lg:flex">
-      <a href="https://github.com/CristianDev01/Quizz-App-ADSO" target="_blank" class="hover:text-white transition-colors"
-      >COMO FUNCIONA
-      </a>
-      <a href="https://github.com/CristianDev01" target="_blank" class="hover:text-white transition-colors"
-      >ACERCA DE
-      </a>
-      <a href="https://github.com/CristianDev01/Quizz-App-ADSO/blob/main/README.md" target="_blank" class="hover:text-white transition-colors"
-      >DOCUMENTACIÓN
-      </a>
-    </div>
-    
-    <div class="pt-1 -mr-1 -ml-8 cursor-pointer animate-heartbeat lg:hidden" id="botonMenu">
-      <AbrirMenu />
-    </div>
-
-    <div class="pt-1 -mr-1 -ml-8 cursor-pointer animate-heartbeat hidden lg:hidden" id="botonCerrar">
-      <CerrarMenu /> 
-    </div>
-    
-    <div class="text-neutral-400 items-center text-sm mx-auto space-x-4 ml-8 mr-20 hidden lg:flex">
+    <div class="text-neutral-400 items-center text-sm space-x-4 hidden lg:flex">
       <a href="/registro" class="text-neutral-100 font-bold py-1 px-3 bg-sky-700 rounded-lg border-b-2 border-sky-900 hover:bg-sky-600 transition-colors"
       >REGISTRARSE</a>
       <a href="/login" class="font-semibold hover:text-white transition-colors"
       >INICIAR SESIÓN</a>
     </div>
 
+    <div class="-ml-10 cursor-pointer animate-heartbeat lg:hidden" id="botonMenu">
+      <AbrirMenu />
+    </div>
+
+    <div class="-ml-10 cursor-pointer animate-heartbeat hidden lg:hidden" id="botonCerrar">
+      <CerrarMenu /> 
+    </div>
+    
   </div>
 
   <div class="bg-black fixed min-h-screen w-full top-14 transition duration-300 pointer-events-none opacity-0 lg:hidden" id="menuLinks">
