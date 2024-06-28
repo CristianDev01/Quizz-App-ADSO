@@ -1,49 +1,54 @@
 ---
-import Layout from "../layouts/Layout.astro";  // Importación del Layout global.
-import GoogleLogo from "../components/icons/Google.astro";  // Importación del icono de Google para el boton de formularios.
+import Layout from "../layouts/Layout.astro";
+import GoogleLogo from "../components/icons/Google.astro";
+
+const cookie = Astro.cookies.get('access_token');
+
+if (cookie?.value)
+return Astro.redirect('/admin')
 ---
 
-<Layout title="Iniciar Sesión">  <!--Title de la página -->
+<Layout title="Iniciar Sesión">
 
-  <form class="pt-52 min-h-screen w-[355px] mx-auto" id="loginForm">  <!--Ajustes del formulario con id para el manejo del DOM -->
+  <form class="pt-52 min-h-screen w-[355px] mx-auto" id="loginForm">
 
     <div class="text-center mb-8 ">
-      <h1 class="text-neutral-200 font-bold text-2xl">Ingresar</h1>  <!--Titulo del formulario -->
+      <h1 class="text-neutral-200 font-bold text-2xl">Ingresar</h1>
     </div>
     
-    <div class="grid mb-4">  <!--Estilos del input correo electrónico con el atributo "name" para capturar los datos del cuerpo en express js y el id para el manejo del DOM -->
+    <div class="grid mb-4">
       <input class="p-3 pl-3 rounded-xl bg-gray-800 placeholder:text-neutral-300 outline-none ring-2 ring-gray-700 focus:ring-2 focus:ring-sky-500 valid:ring-emerald-500 valid:focus:ring-emerald-500" 
       type="email" name="correo_electronico" placeholder="Correo electrónico" id="email" required/>
     </div> 
 
-    <div class="grid mb-4">  <!--Estilos del input contraseña con el atributo "name" para capturar los datos del cuerpo en express js y el id para el manejo del DOM -->
+    <div class="grid mb-4">
       <input class="p-3 pl-3 rounded-xl bg-gray-800 placeholder:text-neutral-300 outline-none ring-2 ring-gray-700 focus:ring-2 focus:ring-sky-500 valid:ring-emerald-500 valid:focus:ring-emerald-500" 
       type="password" name="contrasena" placeholder="Contraseña" id="password" required/>
     </div>
 
-    <div class="grid text-sm font-bold">  <!--Estilos para el boton Iniciar sesión -->
+    <div class="grid text-sm font-bold">
       <button class="text-neutral-100 py-4 bg-sky-700 rounded-xl border-b-4 border-sky-900 hover:bg-sky-600 transition-colors" 
       type="submit">INICIAR SESIÓN</button>
     </div>
 
-    <div class="text-neutral-300 text-center pt-4 hover:text-neutral-100 hover:underline">  <!--Estilos para el link Olvidaste tu contraseña con redirección al formulario para restablecer contraseña -->
+    <div class="text-neutral-300 text-center pt-4 hover:text-neutral-100 hover:underline">  
       <a href="/restablecer-contrasena">¿Olvidaste tu contraseña?</a>
     </div>
 
-    <div class="flex justify-center items-center pt-2">  <!--Estilos para la linea horizontal -->
+    <div class="flex justify-center items-center pt-2">
       <hr class="w-40 border-gray-500">
       <span class="mx-2 text-gray-500 font-bold">O</span>
       <hr class="w-40 border-gray-500">
     </div>
 
-    <div class="grid pt-4">  <!--Estilos para el boton Inciar sesión con Google, deshabilitado de momento -->
+    <div class="grid pt-4">
       <button class="py-3 flex justify-center items-center gap-2 rounded-xl border-2 border-b-4  border-gray-600 hover:bg-gray-800 transition-colors cursor-no-drop" type="button">
       <GoogleLogo /> 
       <span class="text-neutral-100 text-base">Iniciar sesión con Google</span> 
       </button>
     </div>
 
-    <div class="pt-8 text-center text-sm text-gray-400">  <!--Estilos para términos y condiciones -->
+    <div class="pt-8 text-center text-sm text-gray-400">
       <span>Al registrarte en Quizz App, aceptas nuestros <span class="font-bold">Términos y Política de privacidad.</span></span>
     </div>
 
@@ -52,7 +57,7 @@ import GoogleLogo from "../components/icons/Google.astro";  // Importación del 
     </div>
 
   </form>
+
+  <script src="../../js/loginForm.js"></script>
  
 </Layout>
-
-<script src="/src/DOM/loginForm.js"></script>  <!--Importación del script para la interacción del formulario -->

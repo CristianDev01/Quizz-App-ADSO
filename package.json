@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "nodemon ./API/auth.js",
+    "start": "nodemon ./server/auth.js",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -15,14 +15,15 @@
     "@midudev/tailwind-animations": "^0.0.7",
     "astro": "^4.5.10",
     "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "4.19.2",
-    "express-jwt": "^6.1.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.3",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.4"
   }
 }

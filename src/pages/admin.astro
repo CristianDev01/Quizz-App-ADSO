@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const cookie = Astro.cookies.get('access_token');
+
+if (!cookie?.value)
+return Astro.redirect('/')
+---
+
+<Layout title="Panel de administración">
+
+    <div class="min-h-screen pt-80  ">
+      
+      <div class="shadow shadow-gray-950 rounded-md p-4 pl-5 w-[300px] bg-gray-800 mx-auto text-neutral-100">
+
+        <h1 class="font-bold text-xl pt-2">Hola
+          <span class="invisible -mr-1" id="nickname">Usuario</span>
+          <span class="invisible" id="!">!</span>
+        </h1> 
+
+        <p class="pt-6">Estas en el panel de administración</p> 
+
+        <button class="bg-sky-700 mt-4 p-2 w-64 text-sm font-bold rounded-xl border-b-4 border-sky-900 hover:bg-sky-600 transition-colors" 
+        type="submit" id="logout">CERRAR SESIÓN</button>
+        
+      </div>
+      
+    </div>
+
+  <script src="../../js/admin.js"></script>
+  <script src="../../js/logout.js"></script>
+  
+</Layout>

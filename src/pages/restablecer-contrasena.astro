@@ -1,26 +1,31 @@
 ---
-import Layout from "../layouts/Layout.astro";  // Importación del Layout global.
+import Layout from "../layouts/Layout.astro";
+
+const cookie = Astro.cookies.get('access_token');
+
+if (cookie?.value)
+return Astro.redirect('/admin')
 ---
 
-<Layout title="Restablecer contraseña">  <!--Title de la página -->
+<Layout title="Restablecer contraseña">
 
-  <form class="pt-64 min-h-screen w-[355px] mx-auto" id="restablecerForm">   <!--Ajustes del formulario con id para el manejo del DOM -->
+  <form class="pt-64 min-h-screen w-[355px] mx-auto" id="restablecerForm" >
 
-    <div class="text-center mb-6 ">  <!--Titulo del formulario -->
+    <div class="text-center mb-6 ">
       <h1 class="text-neutral-200 font-bold text-2xl">Restablecer contraseña</h1>
       <p class="pt-3 text-neutral-300 ">Te enviaremos instrucciones para que puedas restablecer tu contraseña.</p>
     </div>
     
-    <div class="grid mb-4">  <!--Estilos del input correo electrónico con el atributo "name" para capturar los datos del cuerpo en express js y el id para el manejo del DOM -->
+    <div class="grid mb-4">
       <input class="p-3 pl-3 rounded-xl bg-gray-800 placeholder:text-neutral-300 outline-none ring-2 ring-gray-700 focus:ring-2 focus:ring-sky-500 valid:ring-emerald-500 valid:focus:ring-emerald-500" 
       type="email" name="correo_electronico" placeholder="Correo electrónico" id="email" required/>
     </div>
 
-    <div class="grid text-sm font-bold">  <!--Estilos para el boton enviar -->
+    <div class="grid text-sm font-bold">
       <button class="text-neutral-100 py-4 bg-sky-700 rounded-xl border-b-4 border-sky-900 hover:bg-sky-600 transition-colors" 
       type="submit">ENVIAR</button>
     </div>
   </form>
-</Layout>
 
-<script src="/src/DOM/restablecerForm.js"></script>  <!--Importación del script para la interacción del formulario -->
+  <script src="../../js/restablecerForm.js"></script>
+</Layout>

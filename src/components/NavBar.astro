@@ -1,18 +1,18 @@
 ---
 import AbrirMenu from "./icons/AbrirMenu.astro";   
-import CerrarMenu from "./icons/CerrarMenu.astro"; // Importación de iconos para botones del menu desplegable versión movil.
+import CerrarMenu from "./icons/CerrarMenu.astro";
 ---
 
-<nav class="bg-black fixed top-0 right-0 left-0 z-50">  <!--Fijacion del nav en la parte superior -->
-  <div class="flex justify-between px-4 h-[61px] items-center border-b border-neutral-400 ">  <!--Estilos para el nav -->
+<nav class="bg-black fixed top-0 right-0 left-0 z-50">
+  <div class="flex justify-between px-4 h-[61px] items-center border-b border-neutral-400 ">
     
-    <div class="mx-auto pt-1 lg:mx-0 lg:ml-20">  <!--Ajustes para el logo de mi app responsive  -->
+    <div class="mx-auto pt-1 lg:mx-0 lg:ml-20">
       <a href="/">
         <img src="logo.svg" alt="QUIZZ DEV" />  
       </a>
     </div>
 
-    <div class="text-neutral-400 font-semibold text-sm items-center mx-auto space-x-12 ml-16 hidden lg:flex">  <!--Estilos para los links del nav versión escritorio responsive. (pages para los links en desarrollo)-->
+    <div class="text-neutral-400 font-semibold text-sm items-center mx-auto space-x-12 ml-16 hidden lg:flex">
       <a href="https://github.com/CristianDev01/Quizz-App-ADSO" target="_blank" class="hover:text-white transition-colors"
       >COMO FUNCIONA
       </a>
@@ -24,15 +24,15 @@ import CerrarMenu from "./icons/CerrarMenu.astro"; // Importación de iconos par
       </a>
     </div>
     
-    <div class="pt-1 -mr-1 -ml-8 cursor-pointer animate-heartbeat lg:hidden" id="botonMenu">  <!--Ajustes para el boton abrir menu en versión movil responsive -->
+    <div class="pt-1 -mr-1 -ml-8 cursor-pointer animate-heartbeat lg:hidden" id="botonMenu">
       <AbrirMenu />
     </div>
 
-    <div class="pt-1 -mr-1 -ml-8 cursor-pointer animate-heartbeat hidden lg:hidden" id="botonCerrar">  <!--Ajustes para el boton cerrar menu en versión movil responsive -->
+    <div class="pt-1 -mr-1 -ml-8 cursor-pointer animate-heartbeat hidden lg:hidden" id="botonCerrar">
       <CerrarMenu /> 
     </div>
     
-    <div class="text-neutral-400 items-center text-sm mx-auto space-x-4 ml-8 mr-20 hidden lg:flex">  <!--Estilos para el boton registro y link de inicio de sesión versión escritorio responsive -->
+    <div class="text-neutral-400 items-center text-sm mx-auto space-x-4 ml-8 mr-20 hidden lg:flex">
       <a href="/registro" class="text-neutral-100 font-bold py-1 px-3 bg-sky-700 rounded-lg border-b-2 border-sky-900 hover:bg-sky-600 transition-colors"
       >REGISTRARSE</a>
       <a href="/login" class="font-semibold hover:text-white transition-colors"
@@ -41,7 +41,8 @@ import CerrarMenu from "./icons/CerrarMenu.astro"; // Importación de iconos par
 
   </div>
 
-  <div class="bg-black fixed min-h-screen w-full top-14 transition duration-300 pointer-events-none opacity-0 lg:hidden" id="menuLinks">  <!--Estilos para el menu desplegable versión movil responsive -->
+  <div class="bg-black fixed min-h-screen w-full top-14 transition duration-300 pointer-events-none opacity-0 lg:hidden" id="menuLinks">
+    
     <div class="text-neutral-400 font-semibold text-sm max-w-[97%] mx-auto pt-16">
       <a href="https://github.com/CristianDev01/Quizz-App-ADSO" target="_blank" class="block hover:text-white transition-colors pb-6 px-6 border-b border-neutral-500"
       >COMO FUNCIONA
@@ -60,6 +61,6 @@ import CerrarMenu from "./icons/CerrarMenu.astro"; // Importación de iconos par
       >REGISTRARSE</a>
       </div>   
     </div>
-</nav>
 
-<script src="/src/DOM/menuBotones.js"></script>  <!--Importación del script para la interacción del navbar -->
+    <script src="../../js/menuBotones.js"></script>
+</nav>
