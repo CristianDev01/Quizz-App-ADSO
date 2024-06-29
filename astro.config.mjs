@@ -5,11 +5,4 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   output: "server",
-  proxy: {
-    '/': {
-      target: 'http://localhost:3001',
-      changeOrigin: true,
-      
-    }
-  }
 });
