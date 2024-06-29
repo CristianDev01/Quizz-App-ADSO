@@ -31,7 +31,7 @@ Dentro del proyecto Astro, verá las siguientes carpetas.
 
 ```text
 /
-├── API/
+├── api/
 │   ├── database
 │   │
 │   ├── routes
@@ -50,7 +50,7 @@ Dentro del proyecto Astro, verá las siguientes carpetas.
 └── package.json
 ```
 
-En `API/`, está el modelo de database, el CRUD con los endpoints de login y registro.
+En `api/`, está el modelo de database, el CRUD con los endpoints de autenticación.
 
 Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se expone como una ruta según su nombre de archivo.
 
